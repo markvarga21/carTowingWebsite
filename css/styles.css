@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500i,600,700,900,900i");
+
+body {
+  background-color: #100d1b;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 61px;
+}
+
+.contact {
+  background-color: #aba3d2;
+  padding: 1.5em;
+  border-radius: 2em;
+}
+
+.contact a {
+  color: black;
+  font-weight: 500;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.glowing-border {
+  display: inline-block;
+  padding: 20px;
+  background-color: #aba3d2;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.glowing-border:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.glowing-border::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 10px solid transparent;
+  border-radius: 2.2em;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.glowing-border:hover::after {
+  border-color: #9c92c9;
+  opacity: 1;
+}
+
+.content {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5em;
+}
+
+.content-text {
+  width: fit-content;
+  padding-left: 5em;
+  flex-direction: column;
+}
+
+.content-text p {
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 85px;
+}
+
+.content-image img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 3em;
+  margin-left: 20em;
+}
+
+.key-words {
+  display: flex;
+}
+
+.key-words p {
+  margin-right: 20px;
+}
+
+p.purple {
+  color: #aba3d2;
+  font-weight: 700;
+}
+
+.sub-slogen p {
+  font-family: "Inter";
+  font-weight: 100;
+  font-size: 40px;
+  padding-top: 2em;
+}
